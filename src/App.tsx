@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState } from 'react';
 import './App.css';
 import { calculatePoW } from './utils/pow'; // Import the PoW calculation utility
+// @ts-ignore
 
 interface NostrEvent {
   id: string;
