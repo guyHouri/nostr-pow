@@ -1,7 +1,6 @@
 import { useCallback, useEffect, useState } from 'react';
 import './App.css';
 import { calculatePoW } from './utils/pow'; // Import the PoW calculation utility
-// @ts-ignore
 
 interface NostrEvent {
   id: string;
@@ -29,7 +28,7 @@ interface NostrMetadata {
 // Main App component for the Nostr PoW Client
 const App = () => {
   const [notes, setNotes] = useState<NostrNote[]>([]);
-  const [sockets, setSockets] = useState<WebSocket[]>([]);
+  // const [sockets, setSockets] = useState<WebSocket[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -111,7 +110,7 @@ const App = () => {
     });
 
     // Store the active sockets in state
-    setSockets(newSockets);
+    // setSockets(newSockets);
 
     // Cleanup function: close all WebSocket connections when the component unmounts
     return () => {
