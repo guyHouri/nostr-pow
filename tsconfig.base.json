@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".", // tells TS where to resolve non-relative paths from
+    "paths": {
+      "@/*": ["./src/*"] // Define alias 
+    },
+  }
+}
